@@ -5,4 +5,4 @@ RUN pip install flask
 WORKDIR /app
 COPY . .
 EXPOSE 5001
-ENTRYPOINT ["python3", "App.py"]
+ENTRYPOINT ["python3", "app.py"]
