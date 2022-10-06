@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>home_page</title>
+    </head>
+     <h2 style="color: red; text-decoration: underline;">Home Page</h2> 
+     <h3 style="color: red; text-decoration: underline;">About Me</h3> 
+     <body>
+        <p>My name is Anthony and i am on a qa course and  my is hobby is tinkering with pcs.</p>
+       <p>click <a href="https://www.windowscentral.com/pc-tools-and-toolkits-make-tinkering-your-rig-breeze">here</a> to check out tinkering</P>
+        <p>I am really enjoying this course.</p>
+        
+
+
+        {% for i in list_of_data %}
+        <p><a href="{{url_for('courses_fun',id=i.id)}}">{{i.id}}.{{i.fname}},{{i.lname}},{{i.email}}</a></p>
+        {% endfor %}
+
+        <form method="POST">
+            <input type="text" name="name" placeholder="Enter location to search...">
+            <input type="submit" name="actions" value="Search">
+        </form>
+
+
+        <form method ="POST">
+            <input type="text" name="id" placeholder="Enter id...">
+            <input type="text" name="fname" placeholder="Enter First name...">
+            <input type="text" name="lname" placeholder="Enter Last name...">
+            <input type="text" name="email" placeholder="Enter email...">
+            <input type="submit" name="action" value="Create">
+        </form>
+        <br/>
+
+        <form method ="POST">
+            <input type="text" name="id" placeholder="Enter id...">
+            <input type="text" name="fname" placeholder="Enter First name...">
+            <input type="text" name="lname" placeholder="Enter Last name...">
+            <input type="text" name="email" placeholder="Enter email...">
+            <input type="submit" name="action" value="Delete">
+        </form>
+
+        <br/>
+        <form method ="POST">
+            <input type="text" name="id" placeholder="Update id...">
+            <input type="text" name="fname" placeholder="Update First name...">
+            <input type="text" name="lname" placeholder="Upate Last name...">
+            <input type="text" name="email" placeholder="Upate email...">
+            <input type="submit" name="action" value="Update">
+        </form>
+
+
+
+
+
+
+
+
+    </body>
+  </html>

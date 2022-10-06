@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{{data.name}}</title>
+    </head> 
+     <body>
+        <p>{{data.id}}</p>
+        <h2 style="color: red; text-decoration: underline;">{{data.name}}</h2>
+        <p>{{data.roomnub}}</p>
+        <p><strong>List of students</strong></p>
+        {% for stu in data.semesters %}
+        <p>{{stu.period}}</p>
+        {% endfor %}
+</body>
+
+  </html>
